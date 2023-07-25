@@ -1,0 +1,117 @@
+<div class="outter-container">
+  <div class="container">
+    <h2>Create Account</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="flex-grow-1">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="flex-grow-1">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="flex-grow-1">
+            <label for="userName">User Name</label>
+            <input type="text" id="userName" name="userName" />
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="flex-grow-1">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" />
+          </div>
+        </div>
+      </div>
+
+      
+      
+      
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div>
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" />
+        </div>
+     
+      
+      
+      <div>
+        <label for="isAuthor">Are you an author?</label>
+        <input type="checkbox" id="isAuthor" name="isAuthor"  />
+        <!-- (change)="toggleAuthorFields($event)" -->
+        <!-- #authorFields -->
+      </div>
+      <div  id="authorFields" style="display: none;">
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="flex-grow-1">
+              <label for="userName">DOB</label>
+              <input type="date" id="userName" name="userName" />
+            </div>
+          </div>
+          <div class="col-md-6 d-flex">
+            <div class="flex-grow-1">
+              <label for="phone">Country</label>
+              <select name="country" id="country">
+                <option value="">Select a Country</option>
+                <option value="China">China</option>
+                <option value="India">India</option>
+                <option value="United States">United States</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Russia">Russia</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Japan">Japan</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="DR Congo">DR Congo</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Iran">Iran</option>
+                <option value="Germany">Germany</option>
+                <option value="Thailand">Thailand</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="confirmPassword">Biography</label>
+          <input type="text" id="confirmPassword" name="confirmPassword" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 d-flex">
+          <div class="flex-grow-1">
+            <!-- Content for the first flex item -->
+            <h4><a href="" style="text-decoration: underline;">Forgot Password</a></h4>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="flex-grow-1">
+            <h4 ><a href="" style="padding-left: 80px;text-decoration: underline;">Login</a></h4>
+            <!-- Content for the second flex item -->
+          </div>
+        </div>
+      </div>
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap between cards as needed */
+  }
+  
+  .card {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    margin-top: 0;
+  }
+  
+  .card-description {
+    margin-bottom: 0;
+  }
+  
