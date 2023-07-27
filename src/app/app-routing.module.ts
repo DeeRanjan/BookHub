@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddbookComponent } from './addbook/addbook.component';
 
 const routes: Routes = [
+  {path:'', pathMatch: 'full', redirectTo:"login" },
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'booklist',component:BooksListComponent},

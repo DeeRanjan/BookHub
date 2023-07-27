@@ -1,14 +1,14 @@
 <div class="outter-container">
   <div class="container">
     <h2>Login</h2>
-    <form>
+    <form [formGroup]="LoginForm">
       <div>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" >
+        <label for="username">UserName</label>
+        <input type="text"  formControlName="username" placeholder="Enter Email or Phone" autocomplete="off" >
       </div>
       <div>
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" >
+        <input type="password" formControlName="Password" autocomplete="off" placeholder="Password">
       </div>
       <div class="row">
         <div class="col-md-6 d-flex">
@@ -19,12 +19,12 @@
         </div>
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
-            <h4 ><a href="" style="text-decoration: underline;">Create Account</a></h4>
+            <h4 ><a href="/signup" style="text-decoration: underline;">Create Account</a></h4>
             <!-- Content for the second flex item -->
           </div>
         </div>
       </div>
-      <button type="submit" >Login</button>
+      <button type="submit" (click)="Login()">Login</button>
     </form>
   </div>
   

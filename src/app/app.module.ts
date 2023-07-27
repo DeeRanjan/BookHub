@@ -17,7 +17,7 @@ import { environment } from '../environment/environment';
 import { provideAuth,getAuth } from "@angular/fire/auth";
 import { provideFirestore,getFirestore } from "@angular/fire/firestore";
 import { provideStorage,getStorage } from "@angular/fire/storage";
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +35,7 @@ import { provideStorage,getStorage } from "@angular/fire/storage";
     MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     provideFirebaseApp(()=>initializeApp(environment.firebaseConfig)),
     provideAuth(()=>getAuth()),
     provideFirestore(()=>getFirestore()),

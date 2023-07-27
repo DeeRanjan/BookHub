@@ -1,18 +1,18 @@
 <div class="outter-container">
   <div class="container">
     <h2>Create Account</h2>
-    <form>
+    <form [formGroup]="SignUpForm">
       <div class="row">
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" />
+            <input type="text" id="firstName" formControlName="firstName" />
           </div>
         </div>
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" />
+            <input type="text" id="lastName" formControlName="lastName" />
           </div>
         </div>
       </div>
@@ -20,53 +20,52 @@
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
             <label for="userName">User Name</label>
-            <input type="text" id="userName" name="userName" />
+            <input type="text" id="userName" formControlName="userName" />
           </div>
         </div>
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
             <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" />
+            <input type="text" id="phone" formControlName="PhoneNumber" />
           </div>
         </div>
       </div>
-
-      
-      
-      
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" />
-        </div>
-        <div>
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" />
-        </div>
-     
-      
-      
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" />
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+        />
+      </div>
       <div>
         <label for="isAuthor">Are you an author?</label>
-        <input type="checkbox" id="isAuthor" name="isAuthor"  />
-        <!-- (change)="toggleAuthorFields($event)" -->
-        <!-- #authorFields -->
+        <input type="checkbox" id="isAuthor" formControlName="isAuthor" />
       </div>
-      <div  id="authorFields" style="display: none;">
+
+      <!-- authorFields div to show/hide based on isAuthor checkbox -->
+      <div id="authorFields" *ngIf="SignUpForm.get('isAuthor')?.value">
         <div class="row">
           <div class="col-md-6 d-flex">
             <div class="flex-grow-1">
-              <label for="userName">DOB</label>
-              <input type="date" id="userName" name="userName" />
+              <label for="Dob">DOB</label>
+              <input type="date" id="Dob" formControlName="DateOfBirth" />
             </div>
           </div>
           <div class="col-md-6 d-flex">
             <div class="flex-grow-1">
-              <label for="phone">Country</label>
-              <select name="country" id="country">
+              <label for="country">Country</label>
+              <select name="country" id="country" formControlName="country">
+                <!-- Options for countries -->
+                <option value="">Select a Country</option>
                 <option value="">Select a Country</option>
                 <option value="China">China</option>
                 <option value="India">India</option>
@@ -88,30 +87,39 @@
                 <option value="Iran">Iran</option>
                 <option value="Germany">Germany</option>
                 <option value="Thailand">Thailand</option>
+                <!-- Add more options if needed -->
               </select>
             </div>
           </div>
         </div>
         <div>
-          <label for="confirmPassword">Biography</label>
-          <input type="text" id="confirmPassword" name="confirmPassword" />
+          <label for="Bio">Biography</label>
+          <input type="text" id="Bio" formControlName="Biography" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
             <!-- Content for the first flex item -->
-            <h4><a href="" style="text-decoration: underline;">Forgot Password</a></h4>
+            <h4>
+              <a href="" style="text-decoration: underline">Forgot Password</a>
+            </h4>
           </div>
         </div>
         <div class="col-md-6 d-flex">
           <div class="flex-grow-1">
-            <h4 ><a href="" style="padding-left: 80px;text-decoration: underline;">Login</a></h4>
+            <h4>
+              <a
+                href="/login"
+                style="padding-left: 80px; text-decoration: underline"
+                >Login</a
+              >
+            </h4>
             <!-- Content for the second flex item -->
           </div>
         </div>
       </div>
-      <button type="submit">Create Account</button>
+      <button type="button" (click)="signUpData()">Create Account</button>
     </form>
   </div>
 </div>

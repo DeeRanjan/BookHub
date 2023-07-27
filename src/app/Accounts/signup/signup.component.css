@@ -49,3 +49,6 @@ h2 {
     white-space: nowrap; /* Prevent text from wrapping */
     text-overflow: ellipsis; /* Display an ellipsis (...) for long text */
   }
+  a{
+    color: black;
+  }
